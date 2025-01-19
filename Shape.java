@@ -1,10 +1,12 @@
-abstract class Shape {
-    // Abstract method to calculate the area
-    public abstract double calculateArea();
+public class Shape {
+    protected String shape;
 
-    // Abstract method to calculate the perimeter
-    public abstract double calculatePerimeter();
+    public Shape() {
+        this.shape = "shape";
+    }
 
     @Override
-    public abstract String toString();
+    public String toString() {
+        return "I am a " + this.shape;
+    }
 }
