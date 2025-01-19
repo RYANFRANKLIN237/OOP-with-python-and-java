@@ -1,18 +1,10 @@
-from shape import Shape
-from polygon import Polygon
-from rectangle import Rectangle
-from triangle import Triangle
+from society import Society
 
-s = Shape()
-print(s) 
+my_society = Society("My Professional Society")
+my_society.add_standard_member("Alice Smith", "123 Main St")
+my_society.add_senior_member("Bob Johnson", "456 Oak Ave", 50)
+my_society.add_standard_member("Charlie Brown", "789 Pine Ln")
 
-p = Polygon()
-print(p)  
-
-rect = Rectangle()
-print(rect) 
-print(rect.compute_perimeter()) 
-
-tri = Triangle()
-print(tri) 
-print(tri.compute_perimeter()) 
+print("Society Name: ",my_society.get_name())
+print("Total Fees:", my_society.get_fee_total())
+my_society.print_all_members()
